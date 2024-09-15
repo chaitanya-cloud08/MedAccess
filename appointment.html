@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Poppins:wght@600&family=Montserrat:wght@600&family=Lato:wght@700&family=Open+Sans:wght@600&family=Raleway:wght@700&family=Nunito:wght@700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+  
+    <style>
+       .banner1
+       {
+      background-color:blue;
+      width: 100%;
+      height: 500px;
+      animation: shadow 7s infinite;
+       }
+
+       @keyframes shadow
+       {
+        0% {
+                box-shadow: inset -50px 0 50px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                box-shadow: inset 50px 0 50px rgba(0, 0, 0, 0.5);
+            }
+            100% {
+                box-shadow: inset -50px 0 50px rgba(0, 0, 0, 0.7);
+            }
+       }
+
+       .banner2
+       {
+      background-color: lightblue;
+      width: 100%;
+      height:500px;
+      animation: shadow 7s infinite
+       }
+
+   
+
+    .appoint-form
+    {
+        height: 700px;
+        width: 1000px;
+        background-color: white;
+       border-radius: 25px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+      transform: translateX(-50%)translateY(-50%);
+    }
+   .section
+   {
+    float: left;
+    width: 50%;
+    height: 700px;
+   }
+
+   .section1
+   {
+    float: left;
+    width: 50%;
+    height: 700px;
+    background-color: #cccccc;
+    border-radius: 25px;
+   }
+
+   .section1 img
+   {
+    position: absolute;
+    top: 30%;
+    left: 75%;
+    transform: translateX(-50%)translateY(-50%);
+   }
+
+   .section h1
+   {
+    color: blue;
+    font-family: 'Ubuntu', sans-serif;
+   margin-left: 60px !important;
+   font-size: 30px;
+  
+   }
+
+   .section input,select
+   {
+    border-radius: 16px;
+    border: solid gray;
+    height: 30px;
+    width: 200px;
+    
+   }
+   form p
+   {
+    padding-left: 50px;
+    color: blue;
+    font-family: 'Ubuntu', sans-serif;
+
+   }
+   
+   form input,select
+{
+    margin-left: 50px ;
+   
+}  
+
+ #sbt
+ {
+    margin-top: 15px ;
+ }
+
+  .section1 h1
+  {
+    color: blue;
+    margin-top: 350px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .section1 p
+  {
+    color: blue;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+form button
+{
+    margin-left: 50px ;
+    border-radius: 16px;
+    border: solid gray;
+    height: 30px;
+    width: 200px;
+}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="banner1"></div>
+    <div class="banner2"></div>
+    <div class="appoint-form">
+        <div class="section">
+            <form action="">
+            <h1>Book an appointment</h1>
+            <p>Enter your name:</p>
+            <input type="text" id="nm">
+            <p>Enter your email id:</p>
+            <input type="email" name="em" id="em">
+            <p>Enter your phone number:</p>
+            <input type="number" name="mob" id="mob">
+            <p>Enter the department you want appointment in:</p>
+            <select name="app-type" id="app-type">
+                <option value="-Select-">-Select-</option>
+              <option value="Pediatrician">Pediatrician</option>
+              <option value="Gynaecology">Gynaecology</option>
+              <option value="Pathology">Pathology</option>
+              <option value="ENT">ENT</option>
+              </select>
+              <p>Select prferred date and time:</p>
+              <input type="date" name="dat" id="dat">
+              <input type="time" name="ti" id="ti">
+              <p>Click on this button to recieve your appointment no.</p>
+              <button id="apptno">Click Me</button><br>
+              <input type="submit" value="Submit" id="sbt">
+        </form>
+        </div>
+        <div class="section1">
+            <img src="assets/illustrate-doctor.svg" height="320" width="320">
+            <h1>Healthcare is a right, not a privilege. We’re here to make it accessible for all.</h1>
+            <p>Note: Please remember your appointment no. while visiting the hospital.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+
+ window.onload=function()
+ {
+   document.querySelector('.appoint-form').scrollIntoView({behavior:'smooth'});
+ }
+
+ document.getElementById("apptno").onclick = function(event) 
+ {
+   let appointment = Math.floor(10000 + Math.random() * 90000);
+   event.preventDefault();
+    alert("Your appointment number is: " + appointment);
+ }
+
+
+
+    </script>
+</body>
+</html>
+
+
+
