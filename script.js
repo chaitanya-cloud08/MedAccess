@@ -15,5 +15,16 @@ function profile()
 
 function sign()
 {
+   window.location.href="user.html";
+}
+
+
+function patient()
+{
    window.location.href="login.html";
+}
+
+function adm()
+{
+   window.location.href="docadmin.html";
 }
