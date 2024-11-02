@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+body
+{
+    /* background-image: url(/choosebg.jpg);
+    background-size: 100%; */
+    /* background-color: blue; */
+    background-image: url(/darkbluebg.jpg);
+    background-size: 100%;
+    color: white;
+}
+
+
+        table, th, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+
+        .container
+        {
+            display: flex;
+        }
+
+        .dash-bar
+        {
+            height: 700px;
+            width: 200px;
+            /* border: 2px solid white; */
+            /* background-color: white; */
+            background-image: url(/choosebg.jpg);
+            display: flex;
+            /* gap: 20px; */
+            flex-direction: column;
+            
+        }
+
+        .tables
+        {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+        }
+
+    button
+    {
+        height: 50px;
+        background-color: white;
+        border: 2px solid blue;
+        /* margin-top: 20px; */
+    }
+
+    button:hover
+    {
+        background-color: blue;
+        color: white;
+    }
+
+#appo
+{
+    margin-top: -10px;
+}
+
+
+#appointment-table
+{
+    display: none;
+
+}
+
+
+#analytics
+{
+    width: 1200px;
+    height: 250px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+
+.card
+{
+    height: 100px;
+    width: 250px;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+span
+{
+    color: lightskyblue;
+    font-size: 40px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+    <div class="container">
+    <div class="dash-bar">
+        <img src="/logo.png" alt="">
+        <button onclick="toggleAppoint()" id="appo">Appointments</button>
+        <button onclick="toggleAnalytics()">Analytics</button>
+        <button onclick="window.location.href='/docadmin'">Log Out</button>
+    </div>
+   
+   
+    <div class="tables">
+       <h1>Welcome, Dr. <%= name %>!</h1>
+        <h2>Please select an option from the dashboard on your left:</h2>
+        <div id="appointment-table">
+   <table>
+
+<tr>
+<th>Name of the patient</th>
+<th>E-mail id</th>
+<th>Date</th>
+<th>Time</th>
+<th>Mobile number</th>
+<th>Department</th>
+</tr>
+
+<% appointments.forEach(appointment => { %>
+    <tr>
+    <td><%= appointment.name %></td>
+    <td><%= appointment.email %></td>
+    <td><%= appointment.date %></td>
+    <td><%= appointment.time %></td>
+    <td><%= appointment.mobile %></td>
+    <td><%= appointment.department %></td>
+    </tr>
+   
+    
+<% }) %>
+   </table>
+   
+</div>
+<div id="analytics">
+    <div class="card">No. of doctors available: <span>4</span></div>
+    <div class="card">Appointments made: <span><%= appointmentsCount %></span></div>
+</div>
+   </div>
+   
+</div>
+
+<script>
+
+    function toggleAppoint()
+    {
+        const appoint = document.getElementById("appointment-table")
+    
+        if (appoint.style.display === 'none' || appoint.style.display === '') {
+                    appoint.style.display = 'block';
+                   
+                } else {
+                    appoint.style.display = 'none';
+                    
+                }
+            }
+    
+    
+        
+    
+    function toggleAnalytics()
+    {
+    
+        const analytic = document.getElementById("analytics")
+    
+    if (analytic.style.display === 'none' || analytic.style.display === '') {
+                analytic.style.display = 'flex';
+               
+            } else {
+                analytic.style.display = 'none';
+                
+            }
+    
+    }
+    
+    
+    
+ </script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="/script.js"></script>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+ .banner
+ {
+    margin-top:-50px; 
+    height: 350px;
+    width: 100%;
+    background-color: blue;
+    /* margin-bottom: 50px; */
+ }
+
+ .banner a
+ {
+  
+  color:white;
+  font-size: 30px;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: -870px;
+ }
+.banner a:hover
+{
+  color: aqua;
+}
+ #txt
+ {
+    /* color: white; */
+    text-align: center;
+    
+    font-size: 40px;
+  padding: 30px;
+  font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    background: linear-gradient(45deg, #ffccf9, orange, #d4a5a5, palevioletred, pink);
+    background-size: 300% 300%;
+    color: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pastelMove 2s linear infinite;
+    text-transform: uppercase;
+    text-shadow: 10px 12px 14px rgba(0, 0, 0, 0.2);
+    letter-spacing: 3px;
+}
+
+@keyframes pastelMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#txt1
+{
+    color: white;
+    font-size: 30px;
+    margin-top: -40px;
+ margin-left: 30px;
+ float: left;
+}
+    
+.enquiry-form
+{
+ height: 700px;
+ width: 850px;   
+ /* background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+ /* backdrop-filter: blur(10px); Adjust the blur radius as needed */
+ /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  */
+ background: linear-gradient(270deg, #ffd1dc, #ffe6b3, #d4e157, #81c784, #80deea, #ce93d8);
+    background-size: 1200% 1200%;
+    animation: gradientAnimation 15s ease infinite;
+    box-shadow: 20px 30px 25px rgba(0, 0, 0, 0.2);
+ 
+ position: absolute;
+margin-top: 100px;
+margin-left: 320px;
+ border-radius: 25px;
+ z-index: 1;
+}
+
+form
+{
+  z-index: 1;
+}
+
+
+.banner2
+{
+ background-image: url(/stockimg2.avif);
+ background-size: 100%;
+ background-repeat: no-repeat;
+  height: 900px;
+  width: 100%;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#heading
+{
+ font-family: 'Space Mono', monospace;
+ font-weight: 700;
+  font-size: 40px;
+  white-space: nowrap;
+ padding-left: 50%;
+ padding-top: 20px;
+  color: blue;
+}
+
+.enquiry-form input,select
+{
+  height: 30px;
+  width: 150px;
+  border-radius: 25px;
+ 
+}
+
+.enquiry-form textarea
+{
+  height: 100px;
+  width: 180px;
+  border-radius: 25px;
+ margin-left: 105%;
+ padding: 10px;
+}
+
+.enquiry-form td p
+{
+  color: blue;
+  font-size: 25px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+
+#re
+{
+margin-left: 115%;
+}
+
+#mo,#mobile-no,#user-name
+{
+  margin-left: 100%;
+  white-space: nowrap;
+}
+
+#email-id,#enq-type,#eq
+{
+  margin-left: 50%;
+  white-space: nowrap;
+}
+
+#sbt
+{
+  margin-left: 110%;
+  margin-top: 30px;
+  color: blue;
+  background-color: white;
+  border: none;
+}
+
+#sbt:hover
+{
+  color: white;
+  background-color: blue;
+}
+
+ #banner3
+ {
+  
+  height: 700px;
+  width: 100%;
+  /* border: 2px solid black; */
+  background-image: url(/maybebg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: moveBg 10s linear infinite;
+}
+@keyframes moveBg {
+            0% {
+                background-position: center;
+            }
+            50% {
+                background-position: center top;
+            }
+            100% {
+                background-position: center;
+            }
+        }
+
+
+.container {
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 25px;
+    border: 1px solid #ccc;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    height: 50px; /* Initial height */
+}
+
+#container1 img, #container2 img, #container3 img
+{
+  position: absolute;
+  margin-left: 1400px;
+  margin-top: -45px;
+}
+
+.container.expanded {
+    height: 200px; /* Expanded height */
+}
+
+.content {
+    display: none;
+}
+
+.container.expanded .content {
+    display: block;
+}
+
+.toggleLink {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.toggleLink:hover {
+    text-decoration: underline;
+}
+
+#heading1
+{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+ font-weight: 700;
+ padding: 50px;
+ 
+ color: #007bff;
+}
+
+#container1, #container3
+{
+  background-color: lightblue;
+}
+
+#container2 
+{
+  background-color: pink;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+    
+<div class="banner">
+
+<p id="txt">Online Support-Contact Us for any Query</p>
+<p id="txt1">We would love to hear from you! Let us know of your <br> experience with MedAccess, and keep in touch. <br>Please fill in the required details and our team will get in touch with you.</p><br>
+<p><a href="#banner3">Check out the frequently asked questions</a></p>
+<p><img src="/faqicon.svg" height="350" width="350" style="float: right; margin-top: -180px; margin-right: 100px;"></p>
+</div>
+
+<div class="banner2">
+<div class="enquiry-form">
+<form action="/submit-enquiry" method="post">
+  <table>
+    <th id="heading">Enquiry Form</th>
+<tr>
+  <td><p id="eq">Enquiry Type</p></td>
+  <td><p id="mo">Name:</p></td>
+</tr>
+
+<tr>
+  <td><select name="enqtype" id="enq-type">
+    <option value="-Select-">-Select-</option>
+  <option value="Dr Appointment">Dr Appointment</option>
+  <option value="Lab Report">Lab Report</option>
+  <option value="Feedback">Feedback</option>
+  <option value="Technical issue">Technical Issue</option>
+  </select></td>
+  
+  <td>
+    <input type="text" name="name" id="user-name">
+  </td>
+</tr>
+
+<tr>
+  <td><p id="eq">Email-id:</p></td>
+  <td><p id="mo">Mobile Number:</p></td>
+</tr>
+
+<tr>
+<td>
+  <input type="email" name="email" id="email-id">
+</td>
+<td>
+  <input type="number" name="mobile" id="mobile-no">
+</td>
+</tr>
+
+<tr>
+  <td><p id="re">Remarks:</p></td>
+</tr>
+<tr>
+  <td><textarea name="remarks" id="remarks"></textarea></td>
+</tr>
+
+<tr>
+  <td><input type="submit" value="Submit" id="sbt"></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+
+
+<div id="banner3">
+<p id="heading1">Frequently Asked Questions</p> 
+  <div class="container" id="container1">
+    <p>Ques1. How do I see my reports on MedAccess?</p>
+    <a href="#" class="toggleLink"><img src="/dropdown.svg" alt=""></a>
+    <div class="content">
+        <p>Ans. To see your records on MedAccess, click on the "Reports" button on the navigation bar of our main page. Then Sign in with your credentials and you'll get your reports.</p>
+    </div>
+</div>
+
+<div class="container" id="container2">
+  <p>Ques2. How do I book an appointment with a doctor?</p>
+    <a href="#" class="toggleLink"><img src="/dropdown.svg" alt=""></a>
+    <div class="content">
+        <p>Ans. Go to the "Book Appointment" section of the navbar of our main page, Select your preferred specialty and pick a suitable date and time. </p>
+    </div>
+</div>
+
+<div class="container" id="container3">
+    <p>Ques3. Will MedAccess be having its own pharmaceuticals e-commerce section?</p>
+    <a href="#" class="toggleLink"><img src="/dropdown.svg" alt=""></a>
+    <div class="content">
+        <p>Ans. Yes, we are launching a special section of our website as Med24x7, a pharmaceutical e-shop very soon.</p>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var toggleLinks = document.querySelectorAll('.toggleLink');
+  
+      toggleLinks.forEach(function(link) {
+          link.addEventListener('click', function(event) {
+              event.preventDefault();
+              var container = link.parentElement;
+              container.classList.toggle('expanded');
+              console.log('Container expanded:', container.classList.contains('expanded'));
+          });
+      });
+  });
+  </script>
+  
+
+
+</body>
+</html>
